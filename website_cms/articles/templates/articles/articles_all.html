@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for articles in articles %}
+{{ articles.title }}<br>
+{{ articles.content }}<br>
+{{ articles.published }}<br>
+<br>
+{%endfor%}
+
+{% endblock %}
