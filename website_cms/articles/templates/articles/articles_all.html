@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-
 {% block content %}
 {% for articles in articles %}
-{{ articles.title }}<br>
+<a href="/article/{{ articles.id }}">{{ articles.title }}</a>
+<br>
+{{ articles.published }}
+<br>
+<img src="{{ articles.image.url }}"><br>
 {{ articles.content }}<br>
-{{ articles.published }}<br>
 <br>
 {%endfor%}
-
 {% endblock %}

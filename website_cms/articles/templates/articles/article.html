@@ -1,11 +1,15 @@
 {% extends "base.html" %}
-
 {% block content %}
 {{ article.title }}
+<br>
+<br>
+{{ article.published }}
+<br>
+<br>
+<img src="{{ article.image.url }}">
 <br>
 <br>
 {{ article.content }}
 <br>
 <br>
-{{ article.published }}
 {% endblock %}
