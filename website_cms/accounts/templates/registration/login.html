@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+  {% if form.errors %}
+    <p>
+      Bad user data!
+      <p>If you haven't account click <a href="{% url "register" %}">here</a>.</p>
+    </p>
+  {% else %}
+    <p>If you haven't account click <a href="{% url "register" %}">here</a>.</p>
+  {% endif %}
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <p><input type="submit" value="Login"></p>
+    </form>
+{% endblock %}

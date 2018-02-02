@@ -1,5 +1,10 @@
 <html>
 <body>
+<a href="{% url 'login' %}">Log in</a><br>
+<a href="{% url 'logout' %}">Logout</a><br>
+<a href="{% url 'register' %}">Register</a>
+<br>
+<br>
 {% block content %}
 {% endblock %}
 </body>
