@@ -12,4 +12,10 @@
 {{ article.content }}
 <br>
 <br>
+<h2>Comments</h2>
+{% for comment in article.comment_set.all %}
+{{ comment.name }}<br>
+{{ comment.content }}<br>
+{{ comment.published }}<br>
+{% endfor %}
 {% endblock %}
