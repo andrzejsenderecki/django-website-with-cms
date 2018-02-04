@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>New Article</h2>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{ article_form.as_p }}
+    <button type="submit">Add article</button>
+</form>
+{% endblock %}
