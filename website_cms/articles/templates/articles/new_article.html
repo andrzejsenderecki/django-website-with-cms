@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "dashboard.html" %}
 {% block content %}
-<h2>New Article</h2>
+<h3>New Article</h3>
 <form method="post" enctype="multipart/form-data">
 {% csrf_token %}
 {{ article_form.as_p }}

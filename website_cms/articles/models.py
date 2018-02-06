@@ -1,9 +1,11 @@
 from django.db import models
+from django.conf import settings
 
 class Article(models.Model):
     title = models.CharField(max_length=180)
     content = models.TextField()
     image = models.FileField(upload_to='images/')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     published = models.DateTimeField()
 
     def __str__(self):

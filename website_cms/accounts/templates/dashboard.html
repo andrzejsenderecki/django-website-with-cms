@@ -1,0 +1,12 @@
+<html>
+<body>
+<h3>Hello {{ current_user }}</h3>
+<a href="{% url 'logout' %}">Logout</a><br>
+<a href="/article/new_article" %}">New article</a><br>
+<a href="/article/user_articles" %}">Your articles</a><br>
+<br>
+<br>
+{% block content %}
+{% endblock %}
+</body>
+</html>

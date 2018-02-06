@@ -1,0 +1,8 @@
+{% extends "dashboard.html" %}
+{% block content %}
+<h3>Your articles</h3>
+{% for articles in articles_user %}
+<a href="/article/{{ articles.id }}/user_article_edit">{{ articles.title }}</a>
+<br>
+{%endfor%}
+{% endblock %}

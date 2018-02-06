@@ -1,9 +1,7 @@
 <html>
 <body>
 <a href="{% url 'login' %}">Log in</a><br>
-<a href="{% url 'logout' %}">Logout</a><br>
 <a href="{% url 'register' %}">Register</a>
-<a href="/article/{{ article.id }}/edit_article" %}">Edit Article</a><br>
 <br>
 <br>
 {% block content %}
