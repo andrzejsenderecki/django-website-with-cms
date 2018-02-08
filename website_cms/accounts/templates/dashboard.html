@@ -1,12 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
 <html>
+<div id="website">
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
 <body>
-<h3>Hello {{ current_user }}</h3>
-<a href="{% url 'logout' %}">Logout</a><br>
-<a href="/article/new_article" %}">New article</a><br>
-<a href="/article/user_articles" %}">Your articles</a><br>
-<br>
-<br>
+<div id="header">
+    <h2 style="color: white">Website CMS</h2>
+    <p style="color: #00abff">Hello {{ current_user }}!</p>
+</div>
+<div id="aside">
+    <a href="{% url 'logout' %}">Logout</a><br>
+    <a href="/new_article" %}">New article</a><br>
+    <a href="/user_articles" %}">Your articles</a><br>
+</div>
+<div id="content">
 {% block content %}
 {% endblock %}
+{% block published %}
+{% endblock %}
+</div>
+</div>
 </body>
+</div>
 </html>

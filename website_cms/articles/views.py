@@ -34,7 +34,7 @@ def new_article(request):
             new_article.author = request.user
             new_article.published = timezone.now()
             new_article.save()
-            return HttpResponseRedirect('/article/articles_all')
+            return HttpResponseRedirect('/dashboard')
     else:
         article_form = ArticleForm()
     return render(request, 'articles/new_article.html', {'article_form': article_form, 'current_user': current_user})
@@ -55,7 +55,7 @@ def edit_article(request, article_id):
             new_article.author = request.user
             new_article.published = timezone.now()
             new_article.save()
-            return HttpResponseRedirect('/article/articles_all')
+            return HttpResponseRedirect('/dashboard')
         else:
             edit_article = ArticleForm()
     return render(request, 'articles/edit_article.html', {'edit_article_form': edit_article_form, 'current_user': current_user})
@@ -70,7 +70,7 @@ def new_comment(request, article_id):
             comment.published = timezone.now()
             comment.article = article_number
             comment.save()
-            return HttpResponseRedirect('/article/%s' % article_id)
+            return HttpResponseRedirect('/%s' % article_id)
     else:
         comment_form = CommentForm()
     return render(request, 'articles/new_comment.html', {'comment_form': comment_form})

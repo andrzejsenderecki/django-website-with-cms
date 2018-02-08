@@ -1,10 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
 <html>
+<div id="website">
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
 <body>
-<a href="{% url 'login' %}">Log in</a><br>
-<a href="{% url 'register' %}">Register</a>
-<br>
-<br>
+<div id="header">
+    <h2 style="color: white">Website CMS</h2>
+    <p><a href="{% url 'login' %}">Login</a><a href="{% url 'register' %}">Register</a></p>
+</div>
+<div id="aside">
+    <p><a href="{% url 'home' %}">Home page</a></p>
+</div>
+<div id="content">
 {% block content %}
 {% endblock %}
+{% block published %}
+{% endblock %}
+</div>
+</div>
 </body>
+</div>
 </html>
