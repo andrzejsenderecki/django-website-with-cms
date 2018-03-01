@@ -1,9 +1,9 @@
 # django-website-with-cms
 
-![1](https://user-images.githubusercontent.com/33809996/36862470-306e8fe8-1d87-11e8-9c8f-0a0b62cde973.jpg)
+![1](https://user-images.githubusercontent.com/33809996/36862747-19cb43ac-1d88-11e8-91b9-c2fbc471433d.jpg)
 <hr>
 
-![2](https://user-images.githubusercontent.com/33809996/36862473-31ff2ca0-1d87-11e8-880e-fd0b3496482a.jpg)
+![2](https://user-images.githubusercontent.com/33809996/36862752-1c03967e-1d88-11e8-8613-f3d062c3b078.jpg)
 <hr>
 
 ![3](https://user-images.githubusercontent.com/33809996/36862475-33c334e6-1d87-11e8-97df-60e90cff6dc8.jpg)
