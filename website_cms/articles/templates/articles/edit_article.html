@@ -1,9 +1,9 @@
 {% extends "dashboard.html" %}
 {% block content %}
-<h3>Edit Article</h3>
-<form action="." method="post" enctype="multipart/form-data">
-{% csrf_token %}
-{{ edit_article_form.as_p }}
-<button type="submit">Save changes</button>
-</form>
+    <h3>Edit Article</h3>
+    <form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ edit_article_form.as_p }}
+    <button type="submit">Save changes</button>
+    </form>
 {% endblock %}

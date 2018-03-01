@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-{% for articles in articles %}
-<h1><a href="/{{ articles.id }}">{{ articles.title }}</a></h1>
-<img src="{{ articles.image.url }}"><br>
-<br>
-{%endfor%}
+    {% for articles in articles %}
+        <h1><a href="/{{ articles.id }}">{{ articles.title }}</a></h1>
+        <img src="{{ articles.image.url }}"><br>
+        <br>
+    {%endfor%}
 {% endblock %}
